@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root{
+    --primary: #EF5A63;
+    --light: #F5F5F5;
+    --dark: #161617;
+    --light-dark: #313132;
+    --gray: #C2C2C2;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--dark) ;
+    color: var(--light) ;    
+} 
+
+/* Link Reset */
+a{
+    text-decoration: none;
+   /*  color: var(--light);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300; */
+}
+
+/* LOGO Image Styling */
+.logo img{
+    width: 85px; 
+    filter:drop-shadow(2px 2px 2px black);
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    height: 5rem;
+    padding: 7px 12px;
+    max-width: 1500px;
+    margin: 0 auto;
+    /* background-color: #C2C2C2; */
+}
+
+/* Navbar initial Styling */
+nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+    align-items: center;   
+    
+    
+}
+
+nav ul li{  
+    padding: 0 2px;
+}
+ 
+/* Navbar Menu for mobile */
+.menu{       
+    display: none;
+    /* flex: 1 1 0%; */   /* Search bar moves closer to logo*/
+    justify-content: space-evenly;
+    margin: 0 10px; 
+}
+
+.optional-nav{
+    display: none;
+}
+/* Support Button and logos style */
+.misc-element{
+    display: none;
+    font-family: 'secular One',sans-serif ;    
+}
+
+.support-box{
+    margin: 10px 0;
+    background-color: var(--primary);
+    height: 30px;
+    width: 100px;
+    border-radius: 100px;
+   /*  padding: 0 10px; */
+}
+
+.support-box a{
+    display: flex;
+    justify-content: center;    
+    line-height: 30px;
+    font-size: 16px;
+    color: var(--dark);
+}
+
+.icons{
+    margin: 0 10px;   
+    display: flex;
+    align-items: flex-end;
+}
+
+.icons i{
+    font-size: 25px;
+    color: hsla(100, 100, 100, .60);
+    width: 30px;
+    height: 30px;
+    margin: 10px 5px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+/* Hover animation */
+nav .menu :is(a:hover, a:focus, a:active){
+    color: var(--primary);
+}
+nav .support-box :is(a:hover,a:active,a:focus){
+    color: var(--light);
+}
+nav .misc-element .icons :is(i:hover, i:focus, i:active){
+    color: var(--primary);
+}
+/* Placeholder Color Changer for all browser  START */
+
+::-webkit-input-placeholder {    
+    color: var(--light);
+    
+}
+
+::-moz-placeholder {
+    color: var(--light);
+}
+
+::-ms-placeholder {
+    color: var(--light);
+}
+
+::placeholder {
+    color: var(--light);
+}
+/* Placeholder Color Changer for all browser  END */
+
+/* Search Bar styling */
+nav ul .search-bar{
+    position: relative;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    background-color: var(--primary);    
+    color: var(--light);
+    border-radius: 100px;    
+}
+
+nav ul .search-bar input{
+    color: var(--light);
+    font-family: 'Quicksand', sans-serif ;
+    font-size: 15px;
+    height: 100%;
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background-color: var(--primary);    
+    padding-left: 10px;
+    
+}
+
+/* Profile Picture Styling */
+nav ul .profile img{    
+    width: 40px;
+    border: 2px solid var(--light-dark);
+    border-radius: 100%;
+}
+
+/* Search Icon Styling */
+nav ul .search-bar span{      
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;    
+}
+
+.scroll-container{
+    /* min-width: none; */
+    display: flex;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.scroll-container::-webkit-scrollbar{
+    width: 0;
+}
+
+.scroll-items{
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    font-family: 'Quicksand',sans-serif;
+    font-size: 15px;
+    color: var(--light);
+    margin: 0 auto;
+}
+
+.scroll-items ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: max-content;
+    
+}
+
+.scroll-container ul span{    
+    background-color: var(--light-dark);
+    border-radius: 12px;
+    justify-content: space-evenly;
+}
+
+.scroll-container ul span li{
+    padding: 10px;
+}
+
+.scroll-container ul span :is(li:hover , li:focus,li:active){
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/*  
+
+| Breakpoint | Description |
+| -------- | ---------- |
+| < 640px | xs |
+| >=640px | small |
+| >=768px | medium |
+| >=1024px | large |
+| >=1280px | xl |
+| >=1536px | 2xl |
+*/
+
+
+/* Navbar styling for Small tablet */
+
+@media screen and (min-width: 766px) /* and (max-width: 810) */{
+
+    html{
+        height: 100%;
+    }
+
+    body{
+         background-image: linear-gradient(150deg, #313132 , #161617); 
+        /* background-color: red; */
+    }
+    .menu{
+        display: none;
+    }
+    nav ul .search-bar{
+       
+        width: 320px;  
+    }
+
+    nav ul .search-bar span{
+        top: 10px;
+        right: 10px;
+                
+    }
+
+}
+
+/* Navbar styling for Large tablet */
+
+@media screen and (min-width: 810px){
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        /* background-color: #EF5A63; */
+        background-image: linear-gradient(150deg, #313132 , #161617);        
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: space-between ;
+        align-items: center;
+        
+    }
+
+    nav ul li{
+        padding: 0 10px;
+    }
+
+    .menu {
+        display: inline-flex;
+        
+    }  
+
+    .menu a{
+        color: var(--light);
+        font-family: 'Secular One', sans-serif;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+
+    nav ul .search-bar{         
+        width: 220px;              
+    }
+    
+    nav ul .search-bar input{        
+        height: 100%;
+        width: 100%;        
+    }
+
+    nav ul .search-bar span{
+        top: 10px;
+        right: 20px;
+                
+    }
+
+}
+
+/* Navbar styling for Small PC and Laptop */
+
+@media screen and (min-width: 1024px){
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        
+        background-image: linear-gradient(150deg, #313132 , #161617);
+        /* background-color: #0e0e3c; */
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: space-evenly ;
+        align-items: center;
+        
+    }
+
+    nav ul li{
+        padding: 0 10px;
+    }
+
+    .menu {
+        display: inline-flex;
+        
+    }  
+
+    .menu a{
+        color: var(--light);
+        font-family: 'Secular One', sans-serif;
+        font-size: 20px;
+        margin: 0 5px;
+    }
+    .misc-element{
+        display: inline-flex;
+    }
+    .optional-nav{
+        display: inline-flex;
+    }
+    .icons{display: none;}
+
+    nav ul .search-bar{         
+        width: 250px;              
+    }
+    
+    nav ul .search-bar input{        
+        height: 100%;
+        width: 100%;        
+    }
+
+    nav ul .search-bar span{
+        top: 10px;
+        right: 20px;
+                
+    }
+    /* .scroll-items{
+        padding: 0 40px;
+    } */
+}
+/* Navbar styling for Large PC and Laptop */
+
+@media screen and (min-width: 1334px){
+
+    html{
+        height: 100%;
+    }
+
+    body{
+        
+        background-image: linear-gradient(150deg, #313132 , #161617);
+        /* background-color: #0e0e3c; */
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        justify-content: space-between ;
+        align-items: center;
+        
+    }
+
+    nav ul li{
+        padding: 0 10px;
+    }
+
+    .menu {
+        display: inline-flex;
+        
+    }  
+
+    .menu a{
+        color: var(--light);
+        font-family: 'Secular One', sans-serif;
+        font-size: 20px;
+        margin: 0 5px;
+    }
+    .misc-element{
+        display: inline-flex;
+    }
+    .optional-nav{
+        display: inline-flex;
+    }
+
+    .icons{display: inline-flex;}
+    nav ul .search-bar{         
+        width: 350px;              
+    }
+    
+    nav ul .search-bar input{        
+        height: 100%;
+        width: 100%;        
+    }
+
+    nav ul .search-bar span{
+        top: 10px;
+        right: 20px;
+                
+    }
+
+    /* .scroll-items{
+        padding: 0 30px;
+    } */
+}
+
+
+
+
+
+
+
